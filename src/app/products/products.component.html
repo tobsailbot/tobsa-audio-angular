@@ -1,4 +1,10 @@
+<div class="container border py-5">
+    <div class="h1 ms-auto text-center">Nuevos Productos</div>
+</div>
+<br>
 
+
+  
 <div *ngFor="let i of products" >
     <h4 [innerHTML]="i.name"></h4>
     <img [src]="i.images[0].thumbnail" alt="">
