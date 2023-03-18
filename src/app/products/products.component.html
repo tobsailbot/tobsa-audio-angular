@@ -1,1 +1,11 @@
 
+<div *ngFor="let i of products" >
+    <h4 [innerHTML]="i.name"></h4>
+    <img [src]="i.images[0].thumbnail" alt="">
+    <br>
+    <b [innerHTML]="i.price_html"></b>
+    <a [href]="i.permalink" >Ver Producto</a>
+    <br>
+    <br>
+    <br>
+</div>

@@ -9,10 +9,12 @@ import { StoreApiService } from '../services/store-api.service';
 export class ProductsComponent implements OnInit {
   constructor(private storeApiService: StoreApiService) { }
 
+  products:any = [];
   ngOnInit(): void {
     this.storeApiService.getProducts().subscribe(data => {
       
       console.log(data);
+      this.products = data;
     })
   }
 
