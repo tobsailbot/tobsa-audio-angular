@@ -4,7 +4,7 @@
 <br>
 
 
-  
+<!--  
 <div *ngFor="let i of products" >
     <h4 [innerHTML]="i.name"></h4>
     <img [src]="i.images[0].thumbnail" alt="">
@@ -14,4 +14,20 @@
     <br>
     <br>
     <br>
+</div>
+-->
+
+<div class="container border" style="max-width: 1700px;">
+
+    <ul class="d-flex flex-wrap text-center justify-content-center">
+        <li *ngFor="let i of products" class="d-flex justify-content-between me-5 ms-4" style="margin-bottom: 5em; ">
+            <a href="" style="border-radius: 12px; box-shadow: 0 2px 6px -1px teal; text-decoration: none;">
+                <img [src]="i.images[0].thumbnail" alt="" style="border-radius: 10px 10px 0 0;">
+                <h2 [innerHTML]="i.name" class="text-center text-dark py-3" style="font-size: 20px;">
+                    
+                </h2>
+            </a>
+        </li>
+    </ul>
+
 </div>
