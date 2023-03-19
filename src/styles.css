@@ -9,3 +9,14 @@ html,body
     min-height: 100%;
 }
 
+del {
+  color: rgb(146, 146, 146) ; /* cambia el color a gris */
+  padding: 15px;
+
+}
+
+ins{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}

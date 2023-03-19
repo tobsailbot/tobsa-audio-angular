@@ -10,7 +10,7 @@ export class StoreApiService {
 
   constructor(private http:HttpClient){ }
 
-  api_url = 'https://tobsa.com.ar/wp/wp-json/wc/store/v1/products/';
+  api_url = 'https://tobsa.com.ar/wp/wp-json/wc/store/v1/products?order=asc&orderby=menu_order';
 
   // GET para obtener los datos de la API
   getProducts():Observable<any>{
