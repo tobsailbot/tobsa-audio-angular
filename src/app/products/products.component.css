@@ -6,9 +6,37 @@
     font-family: 'Inter', sans-serif;
 }
 
+.products-container{
+    max-width: 1600px;
+}
+
+@media screen and (max-width: 1580px) {
+    .products-container{
+        max-width: 1007px;
+    }
+}
+
+@media screen and (max-width: 1004px) {
+    .products-container{
+        max-width: 400px;
+    }
+}
+    
+a{
+    text-decoration: none !important;
+}
+a:link{
+    text-decoration: none !important;
+}
+a:visited{
+    text-decoration: none !important;
+}
+a:active{
+    text-decoration: none !important;
+}
+
 .amount{
     font-family: 'Helvetica 45 Light', sans-serif;
-
     padding: 10px 0 0 0;
 }
 
