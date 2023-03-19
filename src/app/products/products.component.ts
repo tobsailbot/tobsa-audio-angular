@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit {
 
   products:any = products;
 
-  // products:any = [];
+   //products:any = [];
   ngOnInit(): void {
 
     // this.storeApiService.getProducts().subscribe(data => {
