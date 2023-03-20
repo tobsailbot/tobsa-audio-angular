@@ -23,7 +23,7 @@ export class HomeComponent {
         prevEl: '.swiper-button-prev',
       },
       autoplay: {
-        delay: 3000,
+        delay: 3500,
         disableOnInteraction: true,
       }
     });
