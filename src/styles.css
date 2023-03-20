@@ -20,3 +20,9 @@ ins{
     text-decoration: none;
     padding: 15px;
 }
+
+span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff!important;
+}

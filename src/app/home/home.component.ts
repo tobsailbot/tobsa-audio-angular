@@ -11,12 +11,18 @@ export class HomeComponent {
 
   ngOnInit() {
 
-    const mySwiper = new Swiper('.mySwiper', {
-
+    const mySwiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: false,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
     });
 
   }
