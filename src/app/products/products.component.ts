@@ -29,12 +29,13 @@ export class ProductsComponent implements OnInit {
     this.storeApiService.getProducts().subscribe(data => {  
       this.products = data;
       this.is_loading = false;
+      console.log(data);
+      
     })
 
   }
   
   onImageLoad(event:any){
-    console.log(event);
     this.img_loading = false;
   }
 }

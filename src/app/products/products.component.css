@@ -41,6 +41,18 @@
     display: block;
 }
 
+.oferta{
+    position:relative;
+    font-size: 24px;
+    z-index: 999;
+    color: rgb(255, 255, 255);
+    height: 52px;
+    background-color: red;
+    top: 23px;
+    border-radius: 0 0 12px 12px;
+    margin-top: -10px;
+    padding-top: 8px;
+}
 
 
 /* Loaders animation divs*/

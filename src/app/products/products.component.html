@@ -36,10 +36,10 @@
         <li *ngFor="let i of products" class="product d-flex justify-content-between" >
             <a [href]="i.permalink"  style="border-radius: 12px; box-shadow: 0 2px 6px -1px teal; text-decoration: none; padding-bottom: 22px;background-color: white;">
                 <div style="width: 92vw; height: 265px;max-width: 450px;" *ngIf="img_loading"></div>
-                    <img class="w-100 h-auto" [src]="i.images[0].thumbnail" (load)="onImageLoad($event)" alt="" style="border-radius: 10px 10px 0 0;">
-
+                <img class="w-100 h-auto" [src]="i.images[0].thumbnail" (load)="onImageLoad($event)" alt="" style="border-radius: 10px 10px 0 0;">
                 <h2 [innerHTML]="i.name" class="text-center text-dark pt-4" style="font-size: 20px;letter-spacing: -0.0415625em; padding: 0 4px 0px 4px;"></h2>
                 <span [innerHTML]="i.price_html" class="amount" ></span>
+                <div class="oferta" *ngIf="i.on_sale">OFERTA!</div>
             </a>
         </li>
     </ul>
