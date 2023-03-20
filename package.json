@@ -21,6 +21,8 @@
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "angular-animations": "^0.11.0",
+    "animations": "^0.0.0",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.4",
     "popper": "^1.0.1",

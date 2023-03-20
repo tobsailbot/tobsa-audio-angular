@@ -1,17 +1,17 @@
-<div class=" py-5 m-auto">
+<br>
+<div class=" py-5 my-3">
     <div class="header-container ms-auto text-center">Nuevos Productos</div>
 </div>
 
 <br>
 
 
-
-<div class="products-container m-auto p-0 text-center" >
+<!-- Loading divs-->
+<div class="products-container m-auto p-0 text-center" *ngIf="is_loading" >
     <ul class="d-flex flex-wrap text-center justify-content-start p-0">
-
-        <li class="product d-flex justify-content-between" >
-            <a style="border-radius: 12px; box-shadow: 0 2px 6px -1px rgb(0, 186, 186); text-decoration: none; ">
-                <div style="border-radius: 10px 10px 0 0; width: 450px; height: 400px;">
+        <li *ngFor="let i of loader_div" class="product d-flex justify-content-between" >
+            <a style="border-radius: 12px; box-shadow: 0 2px 6px -1px rgb(0, 186, 186); text-decoration: none; background-color: white;">
+                <div style="border-radius: 10px 10px 0 0; width: 450px; height: 400px;width: 88vw;max-width: 450px;">
                     <div class='load-container loading'>
                         <div class='img-container'>
                             <div class='img-loader'></div>
@@ -26,49 +26,15 @@
                 </div>
             </a>
         </li>
-        <li class="product d-flex justify-content-between" >
-            <a style="border-radius: 12px; box-shadow: 0 2px 6px -1px rgba(0, 186, 186); text-decoration: none; ">
-                <div style="border-radius: 10px 10px 0 0; width: 450px; height: 400px;">
-                    <div class='load-container loading'>
-                        <div class='img-container'>
-                            <div class='img-loader'></div>
-                        </div>
-                    </div>
-                    <div class='load-container loading'>
-                        <div class='load-content'>
-                            <div class='stripe long-stripe'></div>
-                            <div class='stripe medium-stripe'></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="product d-flex justify-content-between" >
-            <a style="border-radius: 12px; box-shadow: 0 2px 6px -1px rgb(0, 186, 186); text-decoration: none; ">
-                <div style="border-radius: 10px 10px 0 0; width: 450px; height: 400px;">
-                    <div class='load-container loading'>
-                        <div class='img-container'>
-                            <div class='img-loader'></div>
-                        </div>
-                    </div>
-                    <div class='load-container loading'>
-                        <div class='load-content'>
-                            <div class='stripe long-stripe'></div>
-                            <div class='stripe medium-stripe'></div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </li>
-
     </ul>
 </div>
 
 
-<div class="products-container m-auto p-0 text-center" >
+<!-- Woocom products API-->
+<div class="products-container m-auto p-0 text-center" *ngIf="!is_loading" [@fadeInOnEnter]>
     <ul class="d-flex flex-wrap text-center justify-content-start p-0">
         <li *ngFor="let i of products" class="product d-flex justify-content-between" >
-            <a [href]="i.permalink"  style="border-radius: 12px; box-shadow: 0 2px 6px -1px teal; text-decoration: none; padding-bottom: 22px;">
+            <a [href]="i.permalink"  style="border-radius: 12px; box-shadow: 0 2px 6px -1px teal; text-decoration: none; padding-bottom: 22px;background-color: white;">
                 <img class="w-100 h-auto" [src]="i.images[0].thumbnail" alt="" style="border-radius: 10px 10px 0 0;">
                 <h2 [innerHTML]="i.name" class="text-center text-dark pt-4" style="font-size: 20px;letter-spacing: -0.0415625em; padding: 0 4px 0px 4px;"></h2>
                 <span [innerHTML]="i.price_html" class="amount" ></span>
@@ -77,6 +43,8 @@
     </ul>
 </div>
 
+<br>
+<br>
 
 
 

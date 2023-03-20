@@ -13,7 +13,7 @@ export class HomeComponent {
 
     const mySwiper = new Swiper('.swiper', {
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

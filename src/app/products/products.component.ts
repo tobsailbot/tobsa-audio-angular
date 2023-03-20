@@ -1,29 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreApiService } from '../services/store-api.service';
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation} from 'angular-animations';
 import { products } from '../models/products';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
+  animations: [
+    fadeInOnEnterAnimation({ duration: 600 }),
+    fadeOutOnLeaveAnimation({ duration: 600 }),
+  ]
 })
 export class ProductsComponent implements OnInit {
   constructor(private storeApiService: StoreApiService) { }
 
-  products:any = products;
+  loader_div:any = [1,2,3]; // cantidad de divs de carga
+  is_loading:any = true;
+  //products:any = products;
+  products:any = [];
 
-   //products:any = [];
   ngOnInit(): void {
 
-    // this.storeApiService.getProducts().subscribe(data => {
-      
-    //   console.log(data);
-    //   this.products = data;
-    // })
+    this.is_loading = true;
 
-
-
-
+    this.storeApiService.getProducts().subscribe(data => {  
+      this.products = data;
+      this.is_loading = false;
+    })
 
   }
 
