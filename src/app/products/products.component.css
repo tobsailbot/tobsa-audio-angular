@@ -42,16 +42,21 @@
 }
 
 .oferta{
-    position:relative;
-    font-size: 24px;
-    z-index: 999;
-    color: rgb(255, 255, 255);
-    height: 52px;
-    background-color: red;
-    top: 23px;
-    border-radius: 0 0 12px 12px;
-    margin-top: -10px;
-    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background: #cd2653;
+    color: #fff;
+    font-family: "Helvetica",helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    padding: 1.2rem;
+    text-transform: uppercase;
+    z-index: 1;
+    border-radius: 8px 8px 8px 8px;
 }
 
 
