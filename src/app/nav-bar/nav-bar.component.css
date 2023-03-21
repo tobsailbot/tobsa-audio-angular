@@ -8,3 +8,17 @@
     transition-duration: 0.2s;
 }
   
+
+@media screen and (max-width: 992px) {
+    .nav-link {
+        border-bottom: 0; /* Establecemos un borde inferior transparente */
+
+      }
+  
+      .nav-link:hover {
+        border-bottom: 0; /* Establecemos un borde inferior transparente */
+
+      }
+}
+  
+
