@@ -22,6 +22,25 @@
     
 }
 
+.product-card{
+  border-radius: 12px;
+  box-shadow: 0 2px 6px -1px teal;
+  text-decoration: none;
+  padding-bottom: 22px;
+  background-color: white;
+  position: relative;
+  transform: translate3d(0px,0px,0px);
+  transition: all 0.2s ease-out;
+}
+
+.product-card:hover{
+  border: solid 0 #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px teal;
+  transform: translate3d(0px,4px,0px);
+  transition-duration: 0.12s;
+}
+
 
 .woocommerce-Price-amount{
     color: #000;

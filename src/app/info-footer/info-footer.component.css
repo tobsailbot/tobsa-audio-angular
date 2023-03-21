@@ -1,0 +1,19 @@
+.logo-payment{
+    margin: 3.5%;
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 767px) {
+    .logo-payment{
+        margin: 1.5%;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .logo-payment{
+        margin: 0%;
+    }
+}
+    
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap');
