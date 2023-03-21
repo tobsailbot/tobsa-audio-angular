@@ -1,0 +1,10 @@
+.nav-link {
+    border-bottom: 3px solid transparent; /* Establecemos un borde inferior transparente */
+    transition: all 0.2s ease-in-out;
+  }
+
+.nav-link:hover {
+    border-bottom: 3px solid #c5c5c5; /* Establecemos un borde inferior transparente */
+    transition-duration: 0.2s;
+}
+  
