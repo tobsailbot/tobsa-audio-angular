@@ -13,18 +13,19 @@ import { products } from '../models/products';
   ]
 })
 export class ProductsComponent implements OnInit {
-  constructor(private storeApiService: StoreApiService) { }
+  constructor(private storeApiService: StoreApiService,) {
+    document.addEventListener('visibilitychange', () => this.handleVisibilityChange());
+   }
 
   loader_div:any = [1,2,3]; // cantidad de divs de carga
   is_loading:any = true;
   img_loading = true;
   //products:any = products;
   products:any = [];
-
+  selected_product:number = 0;
 
   // product loading animation
-  animationState:any = 'paused';
-  animationBorder:any = '2px solid white'; 
+  animationOpacity:any = 1; 
 
   ngOnInit(): void {
 
@@ -37,7 +38,6 @@ export class ProductsComponent implements OnInit {
       console.log(data);
       
     })
-
   }
   
   onImageLoad(event:any){
@@ -46,6 +46,17 @@ export class ProductsComponent implements OnInit {
 
   loadingProduct(event:any){
     const element = event.currentTarget.querySelector('.loading-product');
-    element.setAttribute('style', 'animation-play-state: running; border: 0;');
+    this.selected_product = element.id;
+    this.animationOpacity = 1;
   }
+
+  handleVisibilityChange() {
+    if (document.hidden) {
+      // El usuario salió de la pestaña
+      this.animationOpacity = 0;
+    } else {
+      // El usuario volvió a la pestaña
+    }
+  }
+
 }
