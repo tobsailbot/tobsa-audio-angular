@@ -34,9 +34,7 @@ export class ProductsComponent implements OnInit {
 
     this.storeApiService.getProducts().subscribe(data => {  
       this.products = data;
-      this.is_loading = false;
-      console.log(data);
-      
+      this.is_loading = false;      
     })
   }
   
