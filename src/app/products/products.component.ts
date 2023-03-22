@@ -18,24 +18,34 @@ export class ProductsComponent implements OnInit {
   loader_div:any = [1,2,3]; // cantidad de divs de carga
   is_loading:any = true;
   img_loading = true;
-  products:any = products;
-  //products:any = [];
+  //products:any = products;
+  products:any = [];
+
+
+  // product loading animation
+  animationState:any = 'paused';
+  animationBorder:any = '2px solid white'; 
 
   ngOnInit(): void {
 
     this.is_loading = true;
     this.img_loading = true;
 
-    // this.storeApiService.getProducts().subscribe(data => {  
-    //   this.products = data;
-    //   this.is_loading = false;
-    //   console.log(data);
+    this.storeApiService.getProducts().subscribe(data => {  
+      this.products = data;
+      this.is_loading = false;
+      console.log(data);
       
-    // })
+    })
 
   }
   
   onImageLoad(event:any){
     this.img_loading = false;
+  }
+
+  loadingProduct(event:any){
+    const element = event.currentTarget.querySelector('.loading-product');
+    element.setAttribute('style', 'animation-play-state: running; border: 0;');
   }
 }

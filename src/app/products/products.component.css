@@ -163,26 +163,24 @@
     */
     .loading-product {
       height: 4px;
-    
       background: linear-gradient(90deg, #fff 0%, #626fff 30%, #fff 50%);
-    
       margin-left: 0%;
       margin-right: 0%;
-      animation: blink 2s infinite;
+      animation: blink 1.8s infinite;
       background-size: 200% 100%;
       background-position: -100% 0;
-      transition: background-position 0.5s ease-in-out;
+      transition: background-position 0.25s ease-in-out;
     }
     
     @keyframes blink {
       0% {
-        background-position: -50% 0;
-      }
-      50% {
         background-position: 50% 0;
       }
-      100% {
+      50% {
         background-position: -50% 0;
+      }
+      100% {
+        background-position: 50% 0;
       }
     }
   
