@@ -18,20 +18,20 @@ export class ProductsComponent implements OnInit {
   loader_div:any = [1,2,3]; // cantidad de divs de carga
   is_loading:any = true;
   img_loading = true;
-  //products:any = products;
-  products:any = [];
+  products:any = products;
+  //products:any = [];
 
   ngOnInit(): void {
 
     this.is_loading = true;
     this.img_loading = true;
 
-    this.storeApiService.getProducts().subscribe(data => {  
-      this.products = data;
-      this.is_loading = false;
-      console.log(data);
+    // this.storeApiService.getProducts().subscribe(data => {  
+    //   this.products = data;
+    //   this.is_loading = false;
+    //   console.log(data);
       
-    })
+    // })
 
   }
   

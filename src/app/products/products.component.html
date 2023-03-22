@@ -7,7 +7,7 @@
 
 
 <!-- Loading divs-->
-<div class="products-container m-auto p-0 text-center" *ngIf="is_loading" >
+<div class="products-container m-auto p-0 text-center" *ngIf="!is_loading" >
     <ul class="d-flex flex-wrap text-center justify-content-start p-0">
         <li *ngFor="let i of loader_div" class="product d-flex justify-content-between" >
             <a style="border-radius: 12px; box-shadow: 0 2px 6px -1px rgb(0, 186, 186); text-decoration: none; background-color: white;">
@@ -31,13 +31,14 @@
 
 
 <!-- Woocom products API-->
-<div class="products-container m-auto p-0 text-center" *ngIf="!is_loading" [@fadeInOnEnter]>
+<div class="products-container m-auto p-0 text-center" *ngIf="is_loading" [@fadeInOnEnter]>
     <ul class="d-flex flex-wrap text-center justify-content-start p-0">
         <li *ngFor="let i of products" class="product d-flex justify-content-between" >
             <a [href]="i.permalink" class="product-card" >
                 <div style="width: 92vw; height: 265px;max-width: 450px;" *ngIf="img_loading"></div>
                 <span class="oferta" *ngIf="i.on_sale">OFERTA!</span>
                 <img class="w-100 h-auto" [src]="i.images[0].thumbnail" (load)="onImageLoad($event)" alt="" style="border-radius: 10px 10px 0 0;">
+                <div class="loading-product"></div>
                 <h2 [innerHTML]="i.name" class="text-center text-dark pt-4" style="font-size: 20px;letter-spacing: -0.0415625em; padding: 0 4px 0px 4px;"></h2>
                 <span [innerHTML]="i.price_html" class="amount" ></span>
             </a>
