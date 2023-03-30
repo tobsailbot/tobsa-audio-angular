@@ -11,7 +11,7 @@ export class StoreApiService {
 
   constructor(private http:HttpClient){ }
 
-  api_url = 'https://tobsa.com.ar/wp/wp-json/wc/store/v1/products?order=asc&orderby=menu_order&catalog_visibility=visible';
+  api_url = 'https://tobsa.pythonanywhere.com/api/store';
  // api_url = 'https://tobsa.com.ar/wp/wp-json/wc/store/v1/products?order=asc&orderby=menu_order&catalog_visibility=any';
 
   // GET para obtener los datos de la API
