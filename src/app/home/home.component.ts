@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-declare var Swiper: any;
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -8,27 +7,5 @@ declare var Swiper: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
-  ngOnInit() {
-
-    const mySwiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      loop: false,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: true,
-      }
-
-    });
-
-  }
 
 }
