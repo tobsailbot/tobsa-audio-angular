@@ -28,6 +28,13 @@ span.swiper-pagination-bullet {
   background-color: #fff!important;
 }
 
+.home-header{
+  box-shadow: #000 14px -5px 29px;
+  border-radius: 0px 0px 20px 20px;
+  background: rgb(78,97,180);
+  background-image: radial-gradient(circle,  hsl(221, 100%, 45%) 5%, hsl(221, 80%, 20%) 100%);
+}
+
 .btn-primary {
   background-color: #008EFF !important;
   border-color: #008EFF !important;
