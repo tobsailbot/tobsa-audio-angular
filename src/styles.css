@@ -46,3 +46,17 @@ span.swiper-pagination-bullet {
   background-color: #007ee3 !important;
   border-color: #007ee3 !important;
 }
+
+.perilla-img{
+  max-width: 100%;
+   height: auto;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(-10px 5px 20px #17176a);
+  transition: transform 0.2s ; /* Establece una duración de transición de 0.5 segundos */
+}
+
+.perilla-img:hover{
+  position: relative;
+  transform: translateY(6px);
+
+}

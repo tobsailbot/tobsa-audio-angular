@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreApiService } from '../services/store-api.service';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation} from 'angular-animations';
-import { products } from '../models/products';
+
 
 @Component({
   selector: 'app-products',
