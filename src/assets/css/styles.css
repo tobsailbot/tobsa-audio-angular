@@ -15,6 +15,13 @@ footer{
   row-gap: 1rem;
 }
 
+.starsBackground{
+  background-image: url(/assets/img/stars.png);
+  background-position: 55%;
+  background-attachment:fixed;
+  background-size: 1090px;
+}
+
 .home__group{
   display: grid;
   position: relative;

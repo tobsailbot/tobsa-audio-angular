@@ -53,11 +53,16 @@ span.swiper-pagination-bullet {
    height: auto;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(-10px 5px 20px #17176a);
-  transition: transform 0.2s ; /* Establece una duración de transición de 0.5 segundos */
+  transition: transform 0.2s, filter 0.3s ; /* Establece una duración de transición de 0.5 segundos */
 }
 
 .perilla-img:hover{
   position: relative;
-  transform: translateY(6px);
-
+  transform: translateY(-6px);
+  filter: drop-shadow(-5px 5px 30px #2299faa8);
 }
+
+.perilla-img{
+  border: 0px solid white;
+}
+
