@@ -26,6 +26,7 @@
     "angular-font-awesome": "^3.1.2",
     "animations": "^0.0.0",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.11.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.4",
     "popper": "^1.0.1",
